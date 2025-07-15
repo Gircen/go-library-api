@@ -1,1 +1,1 @@
-module  githaub.com/Gircen/go-library-api
+module  github.com/Gircen/go-library-api
