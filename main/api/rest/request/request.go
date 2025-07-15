@@ -1,5 +1,5 @@
 package request
 
-type Response struct {
+type Request struct {
 	Content []byte `json:"content"`
 }
