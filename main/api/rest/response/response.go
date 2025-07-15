@@ -23,4 +23,10 @@ func OK(content []byte) Response {
 		Status:  StatusOK,
 		Content: content,
 	}
+
+}
+func OKNoContent() Response {
+	return Response{
+		Status: StatusOK,
+	}
 }
