@@ -2,7 +2,7 @@ package config
 
 type Config struct {
 	App struct {
-		name string `yaml:"name"`
+		Name string `yaml:"name"`
 	} `yaml:"app"`
 	Server struct {
 		Host string `yaml:"host"`
