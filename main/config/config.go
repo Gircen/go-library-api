@@ -5,7 +5,7 @@ type Config struct {
 		Name string `yaml:"name"`
 	} `yaml:"app"`
 	Log struct {
-		level string `yaml:"level"`
+		Level string `yaml:"level"`
 	} `yaml:"log"`
 	Server struct {
 		Host string `yaml:"host"`
