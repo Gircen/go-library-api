@@ -35,7 +35,7 @@ func valueLevel(state string) Level {
 }
 
 func (level Level) IsLog(state string) bool {
-	return valueLevel(state).toInt() >= level.toInt()
+	return level >= valueLevel(state)
 }
 
 func (level Level) toInt() int {
