@@ -35,10 +35,9 @@ func valueLevel(state string) Level {
 
 }
 
-func IsLog(state string, level Level) bool {
+func (level Level) IsLog(state string) bool {
 	return valueLevel(state) >= level
 }
-
 func (level Level) String() string {
 	return stateLevel[level]
 }
