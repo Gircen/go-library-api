@@ -1,5 +1,7 @@
 package log
 
+import "strings"
+
 type Level int
 
 const (
@@ -14,6 +16,27 @@ var stateLevel = map[Level]string{
 	DEBUG: "DEBUG",
 	WARN:  "WARN",
 	ERROR: "ERROR",
+}
+
+func valueLevel(state string) Level {
+	state = strings.ToUpper(state)
+	switch state {
+	case INFO.String():
+		return INFO
+	case DEBUG.String():
+		return DEBUG
+	case WARN.String():
+		return WARN
+	case ERROR.String():
+		return ERROR
+	default:
+		return ERROR
+	}
+
+}
+
+func IsLog(state string, level Level) bool {
+	return valueLevel(state) >= level
 }
 
 func (level Level) String() string {
