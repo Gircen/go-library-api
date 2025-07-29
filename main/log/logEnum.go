@@ -19,8 +19,7 @@ var stateLevel = map[Level]string{
 }
 
 func valueLevel(state string) Level {
-	state = strings.ToUpper(state)
-	switch state {
+	switch strings.ToUpper(state) {
 	case INFO.String():
 		return INFO
 	case DEBUG.String():
@@ -36,8 +35,13 @@ func valueLevel(state string) Level {
 }
 
 func (level Level) IsLog(state string) bool {
-	return valueLevel(state) >= level
+	return valueLevel(state).toInt() >= level.toInt()
 }
+
+func (level Level) toInt() int {
+	return int(level)
+}
+
 func (level Level) String() string {
 	return stateLevel[level]
 }
