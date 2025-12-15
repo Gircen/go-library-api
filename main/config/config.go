@@ -12,6 +12,10 @@ type Config struct {
 		Host string `yaml:"host"`
 		Port string `yaml:"port"`
 	} `yaml:"server"`
+	HealthServer struct {
+		Host string `yaml:"host"`
+		Port string `yaml:"port"`
+	} `yaml:"server"`
 	SettingsServer struct {
 		Host string `yaml:"host"`
 		Port string `yaml:"port"`
