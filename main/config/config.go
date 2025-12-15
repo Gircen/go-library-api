@@ -8,7 +8,12 @@ type Config struct {
 		Level string `yaml:"level"`
 	} `yaml:"log"`
 	Server struct {
+		Name string `yaml:"name"`
 		Host string `yaml:"host"`
 		Port string `yaml:"port"`
 	} `yaml:"server"`
+	SettingsServer struct {
+		Host string `yaml:"host"`
+		Port string `yaml:"port"`
+	} `yaml:"settingsServer"`
 }
