@@ -15,11 +15,19 @@ type Config struct {
 		Host string `yaml:"host"`
 		Port string `yaml:"port"`
 	} `yaml:"server"`
-	HealthServer struct {
+	HealthService struct {
 		Host string `yaml:"host"`
 		Port string `yaml:"port"`
 	} `yaml:"healthServer"`
-	SettingsServer struct {
+	SettingsService struct {
+		Host string `yaml:"host"`
+		Port string `yaml:"port"`
+	} `yaml:"settingsServer"`
+	MonitoringService struct {
+		Host string `yaml:"host"`
+		Port string `yaml:"port"`
+	} `yaml:"settingsServer"`
+	TaskService struct {
 		Host string `yaml:"host"`
 		Port string `yaml:"port"`
 	} `yaml:"settingsServer"`
