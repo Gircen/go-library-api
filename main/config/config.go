@@ -26,11 +26,11 @@ type Config struct {
 	MonitoringService struct {
 		Host string `yaml:"host"`
 		Port string `yaml:"port"`
-	} `yaml:"settingsServer"`
+	} `yaml:"monitoringService"`
 	TaskService struct {
 		Host string `yaml:"host"`
 		Port string `yaml:"port"`
-	} `yaml:"settingsServer"`
+	} `yaml:"taskService"`
 	Services []struct {
 		Name string `yaml:"name"`
 		Host string `yaml:"host"`
